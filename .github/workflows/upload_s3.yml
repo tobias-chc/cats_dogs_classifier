@@ -15,4 +15,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
       - name: Saving the model
-        run: aws s3 sync ./models s3:// ${{ secrets.AWS_BUCKET }}
+        run: aws s3 sync ./models s3://${{ secrets.AWS_BUCKET }}
