@@ -1,0 +1,17 @@
+name: Download data from s3 bucket
+
+on:
+  workflow_dispatch:
+    inputs:
+      s3_url:
+        description: The URL of the source s3 bucket
+        required: true
+        default: 'https://dsti-web-host.s3.amazonaws.com/kagglecatsanddogs_3367a.zip'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download data from s3
+      run:
+        wget ${{ github.event.inputs.s3_url }}
