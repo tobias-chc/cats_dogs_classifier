@@ -4,7 +4,7 @@ from tensorflow.keras import layers
 
 
 # Personal modules
-import src.config
+import src.config as config
 
 
 data_augmentation = keras.Sequential(

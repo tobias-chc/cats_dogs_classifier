@@ -10,7 +10,7 @@ data_processor = data.DataProcessor(
 )
 
 print("Downloading the data ...")
-#data_processor.get_data(config.REMOTE_URL)
+data_processor.get_data(config.REMOTE_URL)
 
 
 print("Unzipping the data ...")

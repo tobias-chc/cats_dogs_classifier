@@ -26,16 +26,14 @@ class DataProcessor:
         """
         wget.download(remote_url, self.raw_directory)
 
-
     def unzip_data(self):
         """
         Unpack zip files in the raw_directory
         """
-        
+
         self.filename = glob2.glob(f"{self.raw_directory}/*.zip")[0]
-        print(self.filename)
         with zipfile.ZipFile(self.filename, "r") as zip_ref:
-            zip_ref.extractall(path =self.processed_directory)
+            zip_ref.extractall(path=self.processed_directory)
 
     def clean_data(self):
         """
@@ -97,7 +95,8 @@ if __name__ == "__main__":
     data_processor.clean_data()
 
     print("Splitting the data")
-    train_ds, val_ds = data_processor.split_data(config.IMAGE_SIZE, config.BATCH_SIZE)
+    train_ds, val_ds = data_processor.split_data(
+        config.IMAGE_SIZE, config.BATCH_SIZE)
 
     print("Split information: \n")
     print(type(train_ds), type(val_ds))
