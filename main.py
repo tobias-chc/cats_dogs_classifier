@@ -2,6 +2,9 @@ import src.data.load_data as data
 import src.models.train_model as model_trainer
 import src.config as config
 
+import boto3
+import mlflow
+
 # 1. Download and unzip the data
 
 print("Creating DataProcessor object ...")

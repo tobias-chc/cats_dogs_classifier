@@ -40,10 +40,12 @@ class DataProcessor:
         Clean processed data
         """
         num_skipped = 0
-        for folder_name in ("PetImages/Cat", "PetImages/Dog"):
-            folder_path = os.path.join(self.processed_directory, folder_name)
+        for folder_name in ("Cat", "Dog"):
+            folder_path = os.path.join(
+                self.processed_directory, 'PetImages', folder_name)
             for fname in os.listdir(folder_path):
                 fpath = os.path.join(folder_path, fname)
+                print(fpath)
                 try:
                     fobj = open(fpath, "rb")
                     is_jfif = tf.compat.as_bytes("JFIF") in fobj.peek(10)

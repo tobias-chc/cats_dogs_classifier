@@ -12,6 +12,6 @@ REMOTE_URL = 'https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8
 
 # Model variables
 IMAGE_SIZE = (180, 180)
-BATCH_SIZE = 32
+BATCH_SIZE = 2
 BUFFER_SIZE = 32
 NUM_EPOCHS = 2

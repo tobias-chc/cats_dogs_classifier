@@ -1,12 +1,15 @@
 # src requriments
 
-tensorflow==2.8.0
+#tensorflow==2.8.0
 
 
 keras==2.8.0
 Keras-Preprocessing==1.1.2
 
 wget==3.2
+glob2==0.7
+boto3==1.21.38
+mlflow
 
 # external requirements
 click
