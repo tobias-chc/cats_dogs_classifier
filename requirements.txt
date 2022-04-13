@@ -10,6 +10,7 @@ wget==3.2
 glob2==0.7
 boto3==1.21.38
 mlflow
+knockknock==0.1.8.1
 
 # external requirements
 click
