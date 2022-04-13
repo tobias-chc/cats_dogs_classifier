@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
+from knockknock import discord_sender
 
 
 # Personal modules
@@ -71,6 +72,7 @@ def make_model(input_shape, num_classes, data_augmentation=data_augmentation):
     return keras.Model(inputs, outputs)
 
 
+@discord_sender(webhook_url = config.WEBHOOK_URL)
 def train(model, train_ds, val_ds):
     """
     Function to create, fit and save the model.
