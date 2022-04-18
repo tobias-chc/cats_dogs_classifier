@@ -12,6 +12,10 @@ current_date = datetime.now().strftime("%m%d%Y")
 
 MODEL_PATH = os.path.sep.join(["models", f"classifier_{current_date}.h5"])
 
+#s3 information
+BUCKET = os.environ['BUCKET']
+
+
 REMOTE_URL = 'https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_3367a.zip'
 
 
