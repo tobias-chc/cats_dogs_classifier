@@ -13,4 +13,4 @@ RUN apt install python3-autopep8 -y
 RUN pip3 install -r requirements.txt
 RUN pip3 install tensorflow==2.8.0 --no-cache-dir
 
-CMD ["python3", "-m", "main.py"]
+CMD ["python3", "./main.py"]
