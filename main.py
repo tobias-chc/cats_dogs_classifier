@@ -1,9 +1,7 @@
 import src.data.load_data as data
 import src.models.train_model as model_trainer
 import src.config as config
-
-import boto3
-import mlflow
+from src.models.save_model_s3 import upload_file
 
 # 1. Download and unzip the data
 
@@ -38,4 +36,6 @@ print("Model summary:", "\n")
 print(model.summary())
 print("Training and saving the model")
 model_trainer.train(model, train_ds, val_ds)
+print(f"Pushing the model into {config.BUCKET} s3 bucket")
+upload_file(config.MODEL_PATH, config.BUCKET, config.MODEL_PATH)
 print("Done!")
